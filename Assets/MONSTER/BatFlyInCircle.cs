@@ -5,7 +5,6 @@ using UnityEngine;
 public class BatFlyInCircle : MonoBehaviour
 {
     public float speed = 5.0f;          // Speed of the bat's flight
-    public float height = 10.0f;        // The constant height at which the bat flies
     public float changeDirectionTime = 2.0f;  // Time interval for changing direction
     private Vector3 targetDirection;    // The current direction the bat is flying towards
     private float timeToChangeDirection;
@@ -51,7 +50,7 @@ public class BatFlyInCircle : MonoBehaviour
         Vector3 newPosition = transform.position + targetDirection * speed * Time.deltaTime;
 
         // Keep the bat at the specified height
-        newPosition.y = height;
+        newPosition.y = transform.position.y;
 
         // Apply the new position
         transform.position = newPosition;

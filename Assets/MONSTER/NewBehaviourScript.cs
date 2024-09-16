@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public Material hitMaterial;
+    public Material hitMaterial, normalMaterial;
     bool checkHit = false;
+    bool isDead = false;
     public int batLives;
     void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.tag == "Player" && !checkHit && Input.GetMouseButton(0))
+        if ((collision.gameObject.tag == "Player" || collision.gameObject.tag == "Stick") && !checkHit && Input.GetMouseButton(0))
         {
-            transform.parent.GetComponent<SkinnedMeshRenderer>().materials[0] = hitMaterial;
+            transform.GetComponent<SkinnedMeshRenderer>().material = hitMaterial;
             batLives--;
             checkHit = true;
             StartCoroutine(HitCoolDown());
@@ -20,14 +21,22 @@ public class NewBehaviourScript : MonoBehaviour
 
     IEnumerator HitCoolDown()
     {
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.3f);
         checkHit = false;
+        transform.GetComponent<SkinnedMeshRenderer>().material = normalMaterial;
+    }
+
+    IEnumerator DelayDie()
+    {
+        yield return new WaitForSeconds(0.3f);
+        isDead = true;
+        Destroy(gameObject);
     }
     private void Update()
     {
-        if (batLives == 0)
+        if (batLives == 0 && !isDead)
         {
-            Destroy(gameObject);
+            StartCoroutine(DelayDie());
         }
     }
 }
