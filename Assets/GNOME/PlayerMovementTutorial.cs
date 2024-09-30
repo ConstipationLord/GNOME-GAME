@@ -15,6 +15,8 @@ public class PlayerMovementTutorial : MonoBehaviour
     public float airMultiplier;
     bool readyToJump;
 
+    public ParticleSystem normalSlash, ultiSlash;
+
     [SerializeField] private Animator playerAnim;
     [SerializeField] private AudioSource wooshSound;
 
@@ -73,6 +75,7 @@ public class PlayerMovementTutorial : MonoBehaviour
         {
             playerAnim.SetBool("hit", true);
             wooshSound.Play();
+            normalSlash.Play();
         }
         else
         {
@@ -82,6 +85,7 @@ public class PlayerMovementTutorial : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             playerAnim.SetBool("curse", true);
+            ultiSlash.Play();
         }
         else
         {

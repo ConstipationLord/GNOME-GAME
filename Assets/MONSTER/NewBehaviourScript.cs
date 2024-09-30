@@ -10,17 +10,40 @@ public class NewBehaviourScript : MonoBehaviour
     public int batLives;
     void OnCollisionStay(Collision collision)
     {
-        if ((collision.gameObject.tag == "Player" || collision.gameObject.tag == "Stick") && !checkHit && Input.GetMouseButton(0))
+        if ((collision.gameObject.tag == "Player" || collision.gameObject.tag == "Stick") && !checkHit)
         {
-            transform.GetComponent<SkinnedMeshRenderer>().material = hitMaterial;
-            batLives--;
-            checkHit = true;
-            StartCoroutine(HitCoolDown());
+            if (Input.GetMouseButton(0))
+            {
+                transform.GetComponent<SkinnedMeshRenderer>().material = hitMaterial;
+                batLives--;
+                checkHit = true;
+                StartCoroutine(HitCoolDown());
+            }
+            else if (Input.GetMouseButton(1))
+            {
+                transform.GetComponent<SkinnedMeshRenderer>().material = hitMaterial;
+                batLives--;
+                checkHit = true;
+                StartCoroutine(UltiCoolDown());
+            }
         }
     }
 
     IEnumerator HitCoolDown()
     {
+        yield return new WaitForSeconds(0.3f);
+        checkHit = false;
+        transform.GetComponent<SkinnedMeshRenderer>().material = normalMaterial;
+    }
+    IEnumerator UltiCoolDown()
+    {
+        yield return new WaitForSeconds(0.3f);
+        transform.GetComponent<SkinnedMeshRenderer>().material = normalMaterial;
+
+        yield return new WaitForSeconds(0.5f);
+        batLives--;
+        transform.GetComponent<SkinnedMeshRenderer>().material = hitMaterial;
+
         yield return new WaitForSeconds(0.3f);
         checkHit = false;
         transform.GetComponent<SkinnedMeshRenderer>().material = normalMaterial;
