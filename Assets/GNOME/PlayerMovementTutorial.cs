@@ -18,7 +18,7 @@ public class PlayerMovementTutorial : MonoBehaviour
     public ParticleSystem normalSlash, ultiSlash;
 
     [SerializeField] private Animator playerAnim;
-    [SerializeField] private AudioSource wooshSound;
+    [SerializeField] private AudioSource normalSFX, ultiSFX;
 
     [HideInInspector] public float walkSpeed;
     [HideInInspector] public float sprintSpeed;
@@ -74,7 +74,7 @@ public class PlayerMovementTutorial : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             playerAnim.SetBool("hit", true);
-            wooshSound.Play();
+            normalSFX.Play();
             normalSlash.Play();
         }
         else
@@ -85,12 +85,19 @@ public class PlayerMovementTutorial : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             playerAnim.SetBool("curse", true);
+            StartCoroutine(DelayUltiSound());
             ultiSlash.Play();
         }
         else
         {
             playerAnim.SetBool("curse", false);
         }
+    }
+
+    IEnumerator DelayUltiSound()
+    {
+        yield return new WaitForSeconds(0.7f);
+        ultiSFX.Play();
     }
 
     private void FixedUpdate()

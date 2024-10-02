@@ -8,6 +8,11 @@ public class NewBehaviourScript : MonoBehaviour
     bool checkHit = false;
     bool isDead = false;
     public int batLives;
+
+    public AudioSource deadSFX;
+
+    public GameObject parent;
+
     void OnCollisionStay(Collision collision)
     {
         if ((collision.gameObject.tag == "Player" || collision.gameObject.tag == "Stick") && !checkHit)
@@ -51,9 +56,10 @@ public class NewBehaviourScript : MonoBehaviour
 
     IEnumerator DelayDie()
     {
+        deadSFX.Play();
         yield return new WaitForSeconds(0.3f);
         isDead = true;
-        Destroy(gameObject);
+        Destroy(parent);
     }
     private void Update()
     {

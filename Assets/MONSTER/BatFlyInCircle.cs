@@ -8,7 +8,6 @@ public class BatFlyInCircle : MonoBehaviour
     public float changeDirectionTime = 2.0f;  // Time interval for changing direction
     private Vector3 targetDirection;    // The current direction the bat is flying towards
     private float timeToChangeDirection;
-
     void Start()
     {
         // Start by choosing a random direction

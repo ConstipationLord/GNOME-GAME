@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class CrawlyFirstDia : MonoBehaviour
 {
     [SerializeField] private GameObject textbox;
+    [SerializeField] private Image bg;
     [SerializeField] private TextMeshProUGUI textComponent;
     [SerializeField] private string[] lines;
     [SerializeField] private float textSpeed;
@@ -16,12 +18,15 @@ public class CrawlyFirstDia : MonoBehaviour
     public bool end = false;
 
     public int index;
-    public bool check, checkSound;
+    public bool check = false;
+    public bool checkSound = false;
+    Color newcol;
 
     // Start is called before the first frame update
     void Start()
     {
-        textbox.GetComponent<TextMeshProUGUI>().text = string.Empty;
+        newcol = bg.color;
+        textbox.transform.GetChild(0).GetComponent<TMP_Text>().text = string.Empty;
         textComponent.text = string.Empty;
         StartCoroutine(BeginWait());
     }
@@ -31,8 +36,9 @@ public class CrawlyFirstDia : MonoBehaviour
         yield return new WaitForSeconds(8f);
         canvasAnim.SetBool("end", true);
         check = true;
-        checkSound = true;
-        textbox.GetComponent<TextMeshProUGUI>().text = "Crawly";
+        checkSound = false;
+        textbox.transform.GetChild(0).GetComponent<TMP_Text>().text = "Crawly";
+        bg.color = new Color(newcol.r, newcol.g, newcol.b, 1f);
         StartDialogue();
     }
 
@@ -53,23 +59,16 @@ public class CrawlyFirstDia : MonoBehaviour
                     textComponent.text = lines[index];
                 }
             }
-            if (textComponent.text == lines[index])
+            if (textComponent.text != lines[index] && !checkSound)
             {
-                checkSound = false;
-            }
-            else
-            {
+                dialogueSFX.Play();
                 checkSound = true;
             }
-        }
-
-        if (checkSound)
-        {
-            dialogueSFX.Play();
-        }
-        else
-        {
-            dialogueSFX.Stop();
+            else if (textComponent.text == lines[index])
+            {
+                dialogueSFX.Stop();
+                checkSound = false;
+            }
         }
     }
 
