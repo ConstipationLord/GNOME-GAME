@@ -97716,9 +97716,9 @@ MonoBehaviour:
     to ridiculous NPCs for NOTHING."
   - Congrats on the sock, bro!
   - Quack! Told you it had dreams!
-  - Called it.
+  - 'Maybe the sock is the friend we made along the way... '
   - I really need a vacation.
-  textSpeed: 0.002
+  textSpeed: 0.005
   gnomeSFX: {fileID: 2133211205}
   elfSFX: {fileID: 563124391}
   duckSFX: {fileID: 341680882}
