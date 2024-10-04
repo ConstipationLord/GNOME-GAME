@@ -5,16 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GNOME GAME.unity
     guid: 7812a3038e39f944d98c73acf4dc6272
   - enabled: 1
     path: Assets/Scenes/TAVERN.unity
     guid: ac413a5dd02d7084cb9dfc3afb31625f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/END SCENE.unity
     guid: e9de092b1dae405489b8a9f8efa601b0
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/LAST LAST SCENE.unity
     guid: 20d2b30342e8f4a42bcbd88643c90d51
   m_configObjects: {}
