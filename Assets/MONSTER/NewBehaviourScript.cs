@@ -13,6 +13,9 @@ public class NewBehaviourScript : MonoBehaviour
 
     public GameObject parent;
 
+    public GameObject[] trinkets;
+    public Transform spawnPoint;
+
     void OnCollisionStay(Collision collision)
     {
         if ((collision.gameObject.tag == "Player" || collision.gameObject.tag == "Stick") && !checkHit)
@@ -59,6 +62,8 @@ public class NewBehaviourScript : MonoBehaviour
         deadSFX.Play();
         yield return new WaitForSeconds(0.3f);
         isDead = true;
+        Instantiate(trinkets[Random.Range(0,7)], spawnPoint.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.15f);
         Destroy(parent);
     }
     private void Update()

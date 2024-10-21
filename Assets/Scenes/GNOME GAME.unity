@@ -8032,7 +8032,10 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 117214286460000749, guid: 38a4753b8942a4a4d8ec7543e01e74d9, type: 3}
     - {fileID: -5117700066308340382, guid: 38a4753b8942a4a4d8ec7543e01e74d9, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1817223356562183640, guid: 38a4753b8942a4a4d8ec7543e01e74d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 338916013}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 38a4753b8942a4a4d8ec7543e01e74d9, type: 3}
       insertIndex: -1
@@ -8130,6 +8133,15 @@ MonoBehaviour:
   batLives: 3
   deadSFX: {fileID: 277892166}
   parent: {fileID: 180657483}
+  trinkets:
+  - {fileID: 4941896214594702627, guid: e2378bdfd368d1b48ab916e7a7429e05, type: 3}
+  - {fileID: 4657510763152687586, guid: 48d63844e81449f4b876eef0f68313ce, type: 3}
+  - {fileID: 2666276948566602005, guid: cb46c4fe0180f2746803af370275707d, type: 3}
+  - {fileID: 3421439093379834247, guid: ff64519799efceb4e9b189d718e3cb73, type: 3}
+  - {fileID: 5952177307188853957, guid: c9051795556608c44ac1c39c94b848d8, type: 3}
+  - {fileID: 3041661235063002226, guid: 0ff48ecc8e5d55b42a362f40d77d6492, type: 3}
+  - {fileID: 7784559554142836788, guid: 2f724b4a12b6fea4c83ed526f58a902b, type: 3}
+  spawnPoint: {fileID: 338916013}
 --- !u!4 &184809633 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4622981333497442, guid: dd3ee0c97aab8a7498c9292f3482f60b, type: 3}
@@ -16949,6 +16961,37 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8679395518972649634, guid: b1e429ff0bcd6f84b927c69de620f3f9, type: 3}
+--- !u!1 &338916012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 338916013}
+  m_Layer: 0
+  m_Name: Drop stuff point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &338916013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338916012}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 951575984}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &339962503 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8962635848729988843, guid: e35f03085174bd94ba453080a555a8cf, type: 3}
@@ -32002,6 +32045,37 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 7814301967758837358, guid: e35f03085174bd94ba453080a555a8cf, type: 3}
+--- !u!1 &794944890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 794944891}
+  m_Layer: 0
+  m_Name: Drop stuff point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &794944891
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794944890}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1187998989}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &799466607 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8485173162082002552, guid: ff0acb5fcae0af4469a13bb658fc7f66, type: 3}
@@ -46510,6 +46584,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &951575984 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1817223356562183640, guid: 38a4753b8942a4a4d8ec7543e01e74d9, type: 3}
+  m_PrefabInstance: {fileID: 180657482}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &951705813 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2d1d0613a7927c749b175528aa9ee55b, type: 3}
@@ -54387,6 +54466,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1517410982821367, guid: 4ba6317f90dac3c45bf8e5fa3fdf2ec2, type: 3}
   m_PrefabInstance: {fileID: 1057418196}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1057501647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1057501648}
+  m_Layer: 0
+  m_Name: Drop stuff point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1057501648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057501647}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1538203498}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1058229816 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e03a6e7951bc814458b8420086e86080, type: 3}
@@ -56664,6 +56774,11 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1282555671811159676, guid: b1e429ff0bcd6f84b927c69de620f3f9, type: 3}
+--- !u!4 &1187998989 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1817223356562183640, guid: 38a4753b8942a4a4d8ec7543e01e74d9, type: 3}
+  m_PrefabInstance: {fileID: 1921438038}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1203547220 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 784848638548316577, guid: e35f03085174bd94ba453080a555a8cf, type: 3}
@@ -71908,6 +72023,15 @@ MonoBehaviour:
   batLives: 3
   deadSFX: {fileID: 277892166}
   parent: {fileID: 1876273544}
+  trinkets:
+  - {fileID: 4941896214594702627, guid: e2378bdfd368d1b48ab916e7a7429e05, type: 3}
+  - {fileID: 4657510763152687586, guid: 48d63844e81449f4b876eef0f68313ce, type: 3}
+  - {fileID: 2666276948566602005, guid: cb46c4fe0180f2746803af370275707d, type: 3}
+  - {fileID: 3421439093379834247, guid: ff64519799efceb4e9b189d718e3cb73, type: 3}
+  - {fileID: 5952177307188853957, guid: c9051795556608c44ac1c39c94b848d8, type: 3}
+  - {fileID: 3041661235063002226, guid: 0ff48ecc8e5d55b42a362f40d77d6492, type: 3}
+  - {fileID: 7784559554142836788, guid: 2f724b4a12b6fea4c83ed526f58a902b, type: 3}
+  spawnPoint: {fileID: 1057501648}
 --- !u!65 &1538203497
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71929,6 +72053,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 11.603036, y: 22.966705, z: 10.656678}
   m_Center: {x: -0.008396704, y: 0.0004044549, z: 0.9955776}
+--- !u!4 &1538203498 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1817223356562183640, guid: 38a4753b8942a4a4d8ec7543e01e74d9, type: 3}
+  m_PrefabInstance: {fileID: 1876273543}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1540251285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77005,7 +77134,7 @@ Transform:
   m_GameObject: {fileID: 1757067962}
   serializedVersion: 2
   m_LocalRotation: {x: -0.12591037, y: -0.0050702915, z: -0.00064353226, w: 0.9920285}
-  m_LocalPosition: {x: 96.853, y: 203.4, z: 92.586}
+  m_LocalPosition: {x: 96.853, y: 203.49, z: 92.586}
   m_LocalScale: {x: 3.7435012, y: 3.7435, z: 3.7435012}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -77847,7 +77976,7 @@ Transform:
   m_GameObject: {fileID: 1807669780}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.040256485, z: -0, w: 0.9991894}
-  m_LocalPosition: {x: 96.853, y: 201.98, z: 98.936}
+  m_LocalPosition: {x: 96.853, y: 202.07, z: 98.936}
   m_LocalScale: {x: 3.3720322, y: 3.372031, z: 3.3720322}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -79223,7 +79352,10 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 117214286460000749, guid: 38a4753b8942a4a4d8ec7543e01e74d9, type: 3}
     - {fileID: -5117700066308340382, guid: 38a4753b8942a4a4d8ec7543e01e74d9, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1817223356562183640, guid: 38a4753b8942a4a4d8ec7543e01e74d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1057501648}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 38a4753b8942a4a4d8ec7543e01e74d9, type: 3}
       insertIndex: -1
@@ -80538,7 +80670,10 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 117214286460000749, guid: 38a4753b8942a4a4d8ec7543e01e74d9, type: 3}
     - {fileID: -5117700066308340382, guid: 38a4753b8942a4a4d8ec7543e01e74d9, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1817223356562183640, guid: 38a4753b8942a4a4d8ec7543e01e74d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 794944891}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 38a4753b8942a4a4d8ec7543e01e74d9, type: 3}
       insertIndex: -1
@@ -80636,6 +80771,15 @@ MonoBehaviour:
   batLives: 3
   deadSFX: {fileID: 277892166}
   parent: {fileID: 1921438039}
+  trinkets:
+  - {fileID: 4941896214594702627, guid: e2378bdfd368d1b48ab916e7a7429e05, type: 3}
+  - {fileID: 4657510763152687586, guid: 48d63844e81449f4b876eef0f68313ce, type: 3}
+  - {fileID: 2666276948566602005, guid: cb46c4fe0180f2746803af370275707d, type: 3}
+  - {fileID: 3421439093379834247, guid: ff64519799efceb4e9b189d718e3cb73, type: 3}
+  - {fileID: 5952177307188853957, guid: c9051795556608c44ac1c39c94b848d8, type: 3}
+  - {fileID: 3041661235063002226, guid: 0ff48ecc8e5d55b42a362f40d77d6492, type: 3}
+  - {fileID: 7784559554142836788, guid: 2f724b4a12b6fea4c83ed526f58a902b, type: 3}
+  spawnPoint: {fileID: 794944891}
 --- !u!1 &1922740253 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 585220623989814957, guid: ff0acb5fcae0af4469a13bb658fc7f66, type: 3}

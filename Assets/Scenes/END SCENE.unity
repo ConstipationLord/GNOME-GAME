@@ -26987,8 +26987,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000030518, y: 0.000019073}
-  m_SizeDelta: {x: 1116.73, y: 285.5031}
+  m_AnchoredPosition: {x: 0.000030518, y: 0.000019073}
+  m_SizeDelta: {x: 1349.875, y: 285.5031}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &651511296
 MonoBehaviour:
@@ -27010,8 +27010,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Crawly Wizard checks his other boot and pulls out the missing sock. He
-    stares at it in disbelief.
+  m_text: Crawly Wizard walks out of the tavern with a look of disbelief on his face...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8e55d38a458d3324ca6ea568b56db3cc, type: 2}
   m_sharedMaterial: {fileID: -3762968272041583682, guid: 8e55d38a458d3324ca6ea568b56db3cc, type: 2}
@@ -97712,8 +97711,7 @@ MonoBehaviour:
   bg: {fileID: 3285680916323242731}
   textComponent: {fileID: 2280590245332629107}
   lines:
-  - "It was in my boot the whole time. I\u2019ve been chasing glowing bats and talking
-    to ridiculous NPCs for NOTHING."
+  - This is so absurd...
   - Congrats on the sock, bro!
   - Quack! Told you it had dreams!
   - 'Maybe the sock is the friend we made along the way... '
