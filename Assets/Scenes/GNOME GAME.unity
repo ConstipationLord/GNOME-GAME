@@ -8072,7 +8072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72f4ce84b9600ed4ea8ad5ae9858b135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 1
   changeDirectionTime: 2
 --- !u!95 &180657486
 Animator:
@@ -80710,7 +80710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72f4ce84b9600ed4ea8ad5ae9858b135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 1
   changeDirectionTime: 2
 --- !u!95 &1921438042
 Animator:
